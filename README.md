@@ -76,6 +76,33 @@ cd notification-service
 ./mvnw.cmd spring-boot:run
 ```
 
+**Notification Service:**
+```bash
+cd notification-service
+./mvnw.cmd spring-boot:run
+```
+
+## Ejecutar Scripts de BD (Opcional)
+
+Aunque los microservicios están configurados para generar las tablas automáticamente (JPA), se adjuntan los scripts SQL de referencia:
+
+### Para microservicio user-service (userdb)
+- `user-service/database/V1__CREATE_TABLES.sql`
+- `user-service/database/V2__ADD_INDEXES.sql`
+- `user-service/database/V3__INSERT_DATA.sql`
+
+### Para microservicio course-service (coursedb)
+- `course-service/database/V1__CREATE_TABLES.sql`
+
+### Para microservicio enrollment-service (enrollmentdb)
+- `enrollment-service/database/V1__CREATE_TABLES.sql`
+
+### Para microservicio payment-service (paymentdb)
+- `payment-service/database/V1__CREATE_TABLES.sql`
+
+### Para microservicio notification-service (notificationdb)
+- `notification-service/database/V1__CREATE_TABLES.sql`
+
 ## Pruebas y Verificación del Flujo
 
 Se incluye una colección de Postman (`LMS_Microservices.postman_collection.json`) en la raíz del proyecto para probar todos los endpoints.
